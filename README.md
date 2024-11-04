@@ -1,7 +1,19 @@
 # Medical_Models
 
-BioMistral source: https://huggingface.co/BioMistral/BioMistral-7B
-Chexnet Source: https://github.com/HabanaAI/Gaudi-solutions/blob/a823f23e49cf8d2d58b9c012cf911681d698f0cc/healthcare/chexnet.ipynb
+### Source
+
+- Medical LLM - BioMistral: https://huggingface.co/BioMistral/BioMistral-7B
+
+- Identify Chest disease - Chexnet: https://github.com/HabanaAI/Gaudi-solutions/blob/a823f23e49cf8d2d58b9c012cf911681d698f0cc/healthcare/chexnet.ipynb
+
+### BioMistral on Gaudi HPU
+
+Goto Optimum-Habana: https://github.com/huggingface/optimum-habana/tree/main/examples/text-generation
+
+Run: 
+```
+python run_generation.py --model_name_or_path BioMistral/BioMistral-7B --bf16 --use_hpu_graphs --use_kv_cache --batch_size 1 --max_new_tokens 128 --attn_softmax_bf16 --limit_hpu_graphs --reuse_cache --trim_logits
+```
 
 ### Chexnet on Gaudi HPU
 
