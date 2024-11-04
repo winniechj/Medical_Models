@@ -15,7 +15,8 @@ Run:
 python run_generation.py --model_name_or_path BioMistral/BioMistral-7B --bf16 --use_hpu_graphs --use_kv_cache --batch_size 1 --max_new_tokens 128 --attn_softmax_bf16 --limit_hpu_graphs --reuse_cache --trim_logits
 ```
 
-
+### BioMistral on CPU
+Run: `python BioMistral_cpu.py`
 
 ### Chexnet
 
