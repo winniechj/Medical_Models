@@ -1,5 +1,4 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
-import habana_frameworks.torch.core as htcore
 
 device = "cpu" # the device to load the model onto
 
