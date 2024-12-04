@@ -14,11 +14,12 @@ import torchvision
 import torch.nn as nn
 from torchvision import transforms
 
-# from habana_frameworks.torch.utils.library_loader import load_habana_module
-# import habana_frameworks.torch.core as htcore
-# import habana_frameworks.torch.distributed.hccl
-# from habana_frameworks.torch.hpu import wrap_in_hpu_graph
-# from habana_frameworks.torch.hpex.optimizers import FusedAdamW
+if args.hpu:
+    from habana_frameworks.torch.utils.library_loader import load_habana_module
+    import habana_frameworks.torch.core as htcore
+    import habana_frameworks.torch.distributed.hccl
+    from habana_frameworks.torch.hpu import wrap_in_hpu_graph
+    from habana_frameworks.torch.hpex.optimizers import FusedAdamW
 
 
 class ChestXrayData(torch.utils.data.Dataset):
@@ -152,7 +153,8 @@ def inference(model, data, device, args):
                 forward_start_time = time.time()
                 outputs = model(images)
                 # for perf mesuraments
-                # htcore.mark_step()
+                if args.hpu:
+                    htcore.mark_step()
                 forward_time += time.time() - forward_start_time
 
                 pbar.update()
@@ -230,9 +232,11 @@ def trainig(model, data, device, args):
                 optimizer.zero_grad()
 
                 loss.backward()
-                # htcore.mark_step()
+                if args.hpu:
+                    htcore.mark_step()
                 optimizer.step()
-                # htcore.mark_step()
+                if args.hpu:
+                    htcore.mark_step()
                 forward_backward_time += time.time() - forward_start_time
 
                 pbar.update()
@@ -302,7 +306,8 @@ def main(args):
         model.load_state_dict(torch.load(args.model_path, map_location='cpu'))
 
     model = model.to(device)
-    # model = wrap_in_hpu_graph(model)
+    if args.hpu:
+        model = wrap_in_hpu_graph(model)
 
     accuracy = None
     loop_time = None
