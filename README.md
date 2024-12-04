@@ -20,8 +20,8 @@ Run: `python BioMistral_cpu.py` in this repo.
 download and extract `images` folder / `Data_Entry_2017_v2020.csv` / `train_val_list.txt` / `test_list.txt` 
 2: `mkdir output`
 3: Start Inferencing or Training:
-- Inference on Gaudi: `python chexnet.py --inference --iterations 1000 --data_dir images --output_dir output --hpu`
-- Training(Finetune): `python chexnet.py --training --data_dir images`
+- Inference on Gaudi: `python chexnet.py --inference --iterations 1000 --data_dir images --output_dir output --hpu --use_lazy_mode`
+- Training(Finetune): `python chexnet.py --training --data_dir images --hpu --use_lazy_mode --epochs 10 `
 
 ### CheXNet on CPU
 - Inference: Run `chexnet.py` in this repo. `python chexnet_cpu.py --inference --model_path chexnet_finetuned.pth --iterations 1000 --data_dir ./ --output_dir output `
