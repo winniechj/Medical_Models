@@ -2,7 +2,7 @@
 
 ## Tutorial:
 ### Run jupyter notebook:
-[CheXNet: Classification of Thoracic Diseases From Chest X-ray Images](https://github.com/winniechj/Medical_Models/blob/main/biomistral.ipynb)
+[CheXNet: Classification of Thoracic Diseases From Chest X-ray Images](https://github.com/winniechj/Medical_Models/blob/main/chexnet.ipynb))
 
 [BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains](https://github.com/winniechj/Medical_Models/blob/main/biomistral.ipynb)
 
