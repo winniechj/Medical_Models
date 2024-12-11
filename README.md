@@ -3,7 +3,7 @@
 ## Tutorial:
 ### Run jupyter notebook:
 1. Enter `jupyter notebook` in terminal.
-2. Choose the ipynb file and ckick start to execute.
+2. Choose the ipynb file (chexnet.ipynb/biomistral.ipynb) and click start to execute.
 
 ### Run python file:
 #### BioMistral on Gaudi HPU
