@@ -1,7 +1,11 @@
-# Healthcare Medical Models
+# Healthcare Medical Models 
 
 ## Tutorial:
+- Run jupyter notebook:
+1. Enter `jupyter notebook` in terminal.
+2. Choose the ipynb file and ckick start to execute.
 
+- Run python file:
 ### BioMistral on Gaudi HPU
 1. Clone optimum-habana repo: `git clone https://github.com/huggingface/optimum-habana.git`
 2. Change directory: `cd optimum-habana/examples/text-generation`
