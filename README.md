@@ -2,6 +2,10 @@
 
 ## Tutorial:
 ### Run jupyter notebook:
+[CheXNet: Classification of Thoracic Diseases From Chest X-ray Images](https://github.com/winniechj/Medical_Models/blob/main/biomistral.ipynb)
+
+[BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains](https://github.com/winniechj/Medical_Models/blob/main/biomistral.ipynb)
+
 1. Enter `jupyter notebook` in terminal.
 2. Choose the ipynb file (chexnet.ipynb/biomistral.ipynb) and click start to execute.
 
