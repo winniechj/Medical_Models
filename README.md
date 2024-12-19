@@ -32,7 +32,7 @@ download and extract `images` folder / `Data_Entry_2017_v2020.csv` / `train_val_
 - Training(Finetune): `python chexnet.py --training --data_dir images --hpu --use_lazy_mode --epochs 10 `
 
 #### CheXNet on CPU
-- Inference: Run `chexnet.py` in this repo. `python chexnet_cpu.py --inference --model_path chexnet_finetuned.pth --iterations 1000 --data_dir ./ --output_dir output `
+- Inference: Run `chexnet.py` in this repo. `python chexnet.py --inference --model_path chexnet_finetuned.pth --iterations 1000 --data_dir ./ --output_dir output `
 - Finetune: `python chexnet.py --training --epochs 10 --data_dir ./ --output_dir output `
   
 ### Source
