@@ -1,4 +1,5 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import time
 
 device = "cpu" # the device to load the model onto
 
