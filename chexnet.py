@@ -14,12 +14,11 @@ import torchvision
 import torch.nn as nn
 from torchvision import transforms
 
-if args.hpu:
-    from habana_frameworks.torch.utils.library_loader import load_habana_module
-    import habana_frameworks.torch.core as htcore
-    import habana_frameworks.torch.distributed.hccl
-    from habana_frameworks.torch.hpu import wrap_in_hpu_graph
-    from habana_frameworks.torch.hpex.optimizers import FusedAdamW
+from habana_frameworks.torch.utils.library_loader import load_habana_module
+import habana_frameworks.torch.core as htcore
+import habana_frameworks.torch.distributed.hccl
+from habana_frameworks.torch.hpu import wrap_in_hpu_graph
+from habana_frameworks.torch.hpex.optimizers import FusedAdamW
 
 
 class ChestXrayData(torch.utils.data.Dataset):
